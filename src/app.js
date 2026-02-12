@@ -4,21 +4,21 @@ const express = require('express');
 const app = express();
 app.use(express.json());//json data ko read karne ke liye middleware use karte hai
 
-const notes=[]//array to store notes
+const notes=[]
 app.post('/notes',(req,res)=>{
     console.log(req.body);
     notes.push(req.body);
     res.status(201).send("note created successfully");
 
 })
-app.get('/notes',(req,res)=>{//get all notes
+app.get('/notes',(req,res)=>{
     res.status(200).json({
         message:"notes retrieved successfully",
         notes:notes
     })
 })
 app.patch('/notes/:id',(req,res)=>{//update note by id
-    const id=req.params.id;
+    const id=req.params.id;// jo id client ne bheja hai usko read karte hai
     const discription=req.body.discription;
     notes[id].discription=discription;
     res.status(200).json({
