@@ -35,4 +35,4 @@ app.delete('/notes/:id',(req,res)=>{
 })
 
 
- module.exports = app;
+ module.exports = app;//app ko export karte hai taki server.js me use kar sake
