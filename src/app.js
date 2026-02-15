@@ -62,7 +62,7 @@ app.delete('/notes/:id',async(req,res)=>{
     })
 })
 
-app.patch('/notes/:id',async(req,res)=>{
+app.patch('/notes/:id',async(req,res)=>{//update note by id
     const id=req.params.id;
     const discription=req.body.discription;
     await noteModel.findByIdAndUpdate(id,{discription:discription});
