@@ -13,3 +13,4 @@ async function connectDB(){
     console.log("disconnected from db")
 }
 module.exports=disconnectDB;//disconnectDB function ko export karte hai taki server.js me use kar sake
+
