@@ -8,7 +8,7 @@ async function connectDB(){
 }
 
  module.exports=connectDB;//connectDB function ko export karte hai taki server.js me use kar sake
- async function disconnectDB(){
+ async function disconnectDB(){//disconnect server from database
     await mongoose.disconnect();
     console.log("disconnected from db")
 }
